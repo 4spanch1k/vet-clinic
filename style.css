@@ -492,3 +492,201 @@ h3 {
   border-top: thin solid var(--border);
   font-size: 0.875rem;
 }
+
+/* 9. Appointment form: validation with pure CSS (:user-valid / :user-invalid) */
+.appointment {
+  display: grid;
+  gap: 0;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem 1.25rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: thin solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 0.5rem 1.5rem var(--shadow-color);
+}
+
+.field {
+  display: grid;
+  align-content: start;
+  gap: 0.375rem;
+  font-weight: 700;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+.field :is(input, select, textarea) {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 0.125rem solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-weight: 400;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field ::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.field :is(input, select, textarea):focus-visible {
+  border-color: var(--primary);
+}
+
+.field :is(input, select, textarea):user-valid {
+  border-color: var(--ok);
+}
+
+.field :is(input, select, textarea):user-invalid {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 8%, var(--bg));
+}
+
+.error {
+  display: none;
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field:has(:user-invalid) .error {
+  display: block;
+}
+
+/* success message appears via :target after a valid submit (action="#thanks") */
+.thanks {
+  display: none;
+  padding: 1rem 1.25rem;
+  border: 0.125rem solid var(--ok);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--ok) 14%, var(--surface));
+  font-weight: 600;
+}
+
+.thanks:target {
+  display: block;
+}
+
+.appointment:has(.thanks:target) .form {
+  display: none;
+}
+
+/* 10. Thumb-zone dock: primary actions at the bottom of the phone screen -- */
+.dock {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: thin solid var(--border);
+  box-shadow: 0 -0.5rem 1.5rem var(--shadow-color);
+}
+
+.dock .btn {
+  min-height: 3.25rem;
+}
+
+.btn-icon {
+  min-width: 3.25rem;
+  padding-inline: 0.875rem;
+}
+
+/* 11. System theme inversion switch (no JavaScript) ----------------------- */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch input {
+  appearance: none;
+  position: relative;
+  flex: none;
+  width: 3.25rem;
+  height: 1.875rem;
+  border-radius: 1rem;
+  background: var(--muted);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.switch input::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  background: var(--surface);
+  transition: translate 0.2s ease;
+}
+
+.switch input:checked {
+  background: var(--primary);
+}
+
+.switch input:checked::after {
+  translate: 1.375rem 0;
+  background: var(--on-primary);
+}
+
+/* checked = the opposite of the system theme */
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-toggle:checked) {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:has(#theme-toggle:checked) {
+    color-scheme: dark;
+  }
+}
+
+/* 12. Polish: squircle corners where supported, reduced motion ------------ */
+@supports (corner-shape: squircle) {
+  .btn,
+  .card,
+  .form,
+  .thanks,
+  .burger,
+  .site-nav a,
+  .hero-media img,
+  .messengers a,
+  .field :is(input, select, textarea) {
+    corner-shape: squircle;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
