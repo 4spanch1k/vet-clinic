@@ -690,3 +690,136 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* 13. Very small phones (>= 24rem): show the brand name next to the logo -- */
+@media (min-width: 24rem) {
+  .brand-name {
+    display: inline;
+  }
+}
+
+/* 14. Desktop (>= 1024px): single column becomes a 12-column grid --------- */
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .dock {
+    display: none;
+  }
+
+  /* header: brand | nav | call button — the burger disappears */
+  .site-header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "brand nav call";
+    gap: 1.5rem;
+    padding-block: 0.75rem;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .site-nav a {
+    padding-inline: 1.25rem;
+    background: transparent;
+  }
+
+  .site-header .btn-call {
+    padding: 0.625rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* hero: text on 6 columns, picture on 6 columns */
+  .hero {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    align-items: center;
+    min-height: 75vh;
+    padding-block: 4rem;
+  }
+
+  .hero-media {
+    order: 0;
+    grid-column: 7 / -1;
+    grid-row: 1;
+  }
+
+  .hero-copy {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    gap: 1.25rem;
+  }
+
+  .hero-actions {
+    width: auto;
+  }
+
+  .hero-actions .btn {
+    flex: 0 0 auto;
+  }
+
+  /* card grids: 3 cards x 4 columns */
+  .cards {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cards > li {
+    grid-column: span 4;
+  }
+
+  /* appointment: intro on 5 columns, form on 6 columns */
+  .appointment {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  .appointment .section-head {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+
+  .form,
+  .thanks {
+    grid-column: 7 / -1;
+    grid-row: 1;
+  }
+
+  /* footer: 4 + 2 + 3 + 3 columns */
+  .site-footer {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    padding-top: 4rem;
+  }
+
+  .footer-about {
+    grid-column: span 4;
+  }
+
+  .footer-nav {
+    grid-column: span 2;
+  }
+
+  .footer-contact,
+  .footer-social {
+    grid-column: span 3;
+  }
+
+  .legal {
+    grid-column: 1 / -1;
+  }
+}
