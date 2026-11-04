@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="A veterinarian listens to a dog's heart with a stethoscope">
+  <rect width="1200" height="900" fill="#cfeae6"/>
+  <circle cx="190" cy="170" r="260" fill="#b9e0da"/>
+  <circle cx="1040" cy="760" r="300" fill="#fbdcc8"/>
+  <circle cx="1010" cy="140" r="90" fill="#e3f4f1"/>
+
+  <!-- medical cross + paw prints -->
+  <g fill="#0a6f69" opacity=".9">
+    <rect x="975" y="96" width="70" height="22" rx="8" transform="translate(0 33)"/>
+    <rect x="999" y="72" width="22" height="70" rx="8" transform="translate(0 33)"/>
+  </g>
+  <g fill="#8fcfc6">
+    <ellipse cx="120" cy="610" rx="28" ry="24"/>
+    <circle cx="86" cy="574" r="11"/><circle cx="112" cy="560" r="11"/><circle cx="140" cy="560" r="11"/><circle cx="162" cy="578" r="11"/>
+    <g transform="translate(60 -230) scale(.7)">
+      <ellipse cx="120" cy="610" rx="28" ry="24"/>
+      <circle cx="86" cy="574" r="11"/><circle cx="112" cy="560" r="11"/><circle cx="140" cy="560" r="11"/><circle cx="162" cy="578" r="11"/>
+    </g>
+  </g>
+
+  <!-- vet (behind the table) -->
+  <g>
+    <path d="M205 735V560c0-70 55-110 125-110h40c70 0 125 40 125 110v175z" fill="#fff"/>
+    <path d="M290 450l45 95 45-95z" fill="#0a6f69"/>
+    <path d="M318 450l17 40 17-40z" fill="#f0c49c"/>
+    <rect x="315" y="402" width="40" height="60" rx="18" fill="#e9b88c"/>
+    <circle cx="335" cy="340" r="84" fill="#f0c49c"/>
+    <path d="M250 335c-6-86 62-122 120-110 52 11 70 54 64 96-20-34-60-52-100-44-36 7-62 26-84 58z" fill="#2f2118"/>
+    <circle cx="305" cy="345" r="8" fill="#2f2118"/><circle cx="368" cy="345" r="8" fill="#2f2118"/>
+    <path d="M308 380c16 18 44 18 60 0" fill="none" stroke="#2f2118" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="283" cy="372" r="14" fill="#f0a98a" opacity=".6"/><circle cx="392" cy="372" r="14" fill="#f0a98a" opacity=".6"/>
+    <!-- stethoscope around neck -->
+    <path d="M276 472c-10 78 22 118 66 118s76-40 66-118" fill="none" stroke="#2b4a47" stroke-width="9" stroke-linecap="round"/>
+    <!-- arm to the dog -->
+    <path d="M420 560c60 10 120 30 190 50" fill="none" stroke="#fff" stroke-width="64" stroke-linecap="round"/>
+    <path d="M560 596c30 10 60 20 82 26" fill="none" stroke="#f0c49c" stroke-width="44" stroke-linecap="round"/>
+  </g>
+
+  <!-- dog -->
+  <g>
+    <path d="M905 640c60 4 110-30 100-96-4-24-30-30-34-8-6 36-30 56-66 58z" fill="#c98a4f"/>
+    <ellipse cx="800" cy="580" rx="150" ry="165" fill="#d9a066"/>
+    <ellipse cx="790" cy="618" rx="82" ry="112" fill="#f4dfc5"/>
+    <rect x="708" y="640" width="58" height="100" rx="29" fill="#d9a066"/>
+    <rect x="814" y="640" width="58" height="100" rx="29" fill="#d9a066"/>
+    <ellipse cx="737" cy="730" rx="40" ry="22" fill="#f4dfc5"/>
+    <ellipse cx="843" cy="730" rx="40" ry="22" fill="#f4dfc5"/>
+    <ellipse cx="682" cy="372" rx="48" ry="104" fill="#8a5a32" transform="rotate(14 682 372)"/>
+    <ellipse cx="900" cy="372" rx="48" ry="104" fill="#8a5a32" transform="rotate(-14 900 372)"/>
+    <circle cx="791" cy="372" r="125" fill="#d9a066"/>
+    <ellipse cx="791" cy="428" rx="76" ry="60" fill="#f4dfc5"/>
+    <path d="M753 440q38 66 76 0z" fill="#e8798b"/>
+    <path d="M791 410v22M791 432q-20 22-40 2M791 432q20 22 40 2" fill="none" stroke="#2b2b2b" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="791" cy="396" rx="27" ry="18" fill="#2b2b2b"/>
+    <circle cx="741" cy="346" r="14" fill="#2b2b2b"/><circle cx="841" cy="346" r="14" fill="#2b2b2b"/>
+    <circle cx="746" cy="341" r="4.5" fill="#fff"/><circle cx="846" cy="341" r="4.5" fill="#fff"/>
+    <path d="M708 482c50 26 116 26 166 0" fill="none" stroke="#0a6f69" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="791" cy="512" r="17" fill="#ffc847"/>
+    <!-- stethoscope head on the chest -->
+    <circle cx="722" cy="622" r="27" fill="#2b4a47"/>
+    <circle cx="722" cy="622" r="15" fill="#9fd4cc"/>
+  </g>
+
+  <!-- exam table -->
+  <rect x="120" y="728" width="960" height="46" rx="23" fill="#4f7571"/>
+  <rect x="190" y="774" width="36" height="78" rx="12" fill="#3d5d5a"/>
+  <rect x="974" y="774" width="36" height="78" rx="12" fill="#3d5d5a"/>
+  <ellipse cx="600" cy="866" rx="520" ry="16" fill="#0a6f69" opacity=".12"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Portrait of a veterinarian">
+  <clipPath id="frame"><rect width="240" height="240" rx="48"/></clipPath>
+  <g clip-path="url(#frame)">
+    <rect width="240" height="240" fill="#cfeae6"/>
+    <path d="M30 240v-40c0-34 28-56 62-60h56c34 4 62 26 62 60v40z" fill="#fff"/>
+    <path d="M96 140l24 46 24-46z" fill="#0a6f69"/>
+    <rect x="104" y="108" width="32" height="40" rx="14" fill="#e9b88c"/>
+    <circle cx="120" cy="86" r="48" fill="#f0c49c"/>
+    <path d="M72 86c-8-52 36-72 70-62 30 8 40 36 34 62-10-22-34-32-52-28-22 4-42 14-52 28z" fill="#2f2118"/>
+    <path d="M72 84c-14 30-8 58 6 72-14-6-24-30-6-72z" fill="#2f2118"/>
+    <circle cx="104" cy="92" r="5" fill="#2f2118"/><circle cx="138" cy="92" r="5" fill="#2f2118"/>
+    <path d="M106 110c8 8 22 8 30 0" fill="none" stroke="#2f2118" stroke-width="4.500" stroke-linecap="round"/>
+    <path d="M82 150c-8 40 12 62 38 62s46-22 38-62" fill="none" stroke="#2b4a47" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
