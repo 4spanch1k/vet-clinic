@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VetCare Clinic — Professional Care for Your Pets</title>
+  <meta name="description" content="VetCare is a veterinary clinic offering therapy, surgery and vaccination for pets, experienced doctors and online appointment booking. Open 24/7.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- 1. Header / Nav component -->
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="VetCare Clinic, back to top">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span class="brand-name">VetCare</span>
+    </a>
+
+    <input class="menu-toggle sr-only" type="checkbox" id="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav">
+    <label class="burger" for="menu-toggle" aria-hidden="true"><span></span></label>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-call" href="tel:+77001234567">Call Doctor 24/7</a>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero section component -->
+    <section class="hero" aria-labelledby="hero-title">
+      <header class="hero-copy">
+        <p class="eyebrow">Open 24/7 · Emergency care</p>
+        <h1 id="hero-title">Professional Care for Your Pets</h1>
+        <p class="lead">Experienced veterinarians, modern diagnostics and gentle treatment for dogs, cats and small animals — all in one friendly clinic.</p>
+        <p class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#appointment">Make an Appointment</a>
+          <a class="btn btn-ghost btn-lg" href="#services">Our services</a>
+        </p>
+      </header>
+      <figure class="hero-media">
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.svg" alt="A veterinarian listens to a dog's heart with a stethoscope" width="1200" height="900">
+        </picture>
+      </figure>
+    </section>
+
+    <!-- 3. Grid section component: services -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <header class="section-head">
+        <h2 id="services-title">Our Services</h2>
+        <p>Three core directions that cover the everyday health of your pet.</p>
+      </header>
+      <ul class="cards">
+        <li>
+          <article class="card">
+            <img src="images/icon-therapy.svg" alt="" width="64" height="64">
+            <h3>Therapy</h3>
+            <p>Examinations, diagnostics, laboratory tests and treatment plans for everyday and chronic conditions.</p>
+            <a class="card-link" href="#appointment">Book a visit</a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <img src="images/icon-surgery.svg" alt="" width="64" height="64">
+            <h3>Surgery</h3>
+            <p>Planned and emergency operations with careful anesthesia monitoring and attentive recovery care.</p>
+            <a class="card-link" href="#appointment">Book a visit</a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <img src="images/icon-vaccination.svg" alt="" width="64" height="64">
+            <h3>Vaccination</h3>
+            <p>Age-appropriate vaccine schedules, pet passports and annual check-ups to keep your pet protected.</p>
+            <a class="card-link" href="#appointment">Book a visit</a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Staff -->
+    <section class="section section-alt" id="staff" aria-labelledby="staff-title">
+      <header class="section-head">
+        <h2 id="staff-title">Our Veterinarians</h2>
+        <p>Qualified specialists who treat every pet like family.</p>
+      </header>
+      <ul class="cards">
+        <li>
+          <article class="card card-person">
+            <img src="images/staff-1.svg" alt="Dr. Aigerim Nurlanova" width="240" height="240">
+            <h3>Dr. Aigerim Nurlanova</h3>
+            <p class="role">Head Veterinarian, Therapist</p>
+            <p>DVM. 12 years in small-animal internal medicine and diagnostics.</p>
+          </article>
+        </li>
+        <li>
+          <article class="card card-person">
+            <img src="images/staff-2.svg" alt="Dr. Daniyar Sadykov" width="240" height="240">
+            <h3>Dr. Daniyar Sadykov</h3>
+            <p class="role">Surgeon</p>
+            <p>DVM. 9 years of soft-tissue and orthopedic surgery practice.</p>
+          </article>
+        </li>
+        <li>
+          <article class="card card-person">
+            <img src="images/staff-3.svg" alt="Dr. Madina Kassymova" width="240" height="240">
+            <h3>Dr. Madina Kassymova</h3>
+            <p class="role">Vaccination &amp; Preventive Care</p>
+            <p>DVM. 6 years in immunization schedules and travel documents for pets.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. Feedback form component -->
+    <section class="section appointment" id="appointment" aria-labelledby="appointment-title">
+      <header class="section-head">
+        <h2 id="appointment-title">Book an Appointment</h2>
+        <p>Leave your details and choose a date. We will call you to confirm the exact time.</p>
+      </header>
+
+      <form class="form" action="#thanks" method="get">
+        <label class="field">
+          <span>Pet's Name</span>
+          <input type="text" name="pet_name" autocomplete="off" placeholder="e.g. Max" required minlength="2" maxlength="40">
+          <small class="error">Please enter your pet's name (at least 2 characters).</small>
+        </label>
+
+        <label class="field">
+          <span>Pet Species</span>
+          <select name="pet_species" required>
+            <option value="" selected disabled>Choose species</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Bird</option>
+            <option>Rodent</option>
+            <option>Other</option>
+          </select>
+          <small class="error">Please choose a species.</small>
+        </label>
+
+        <label class="field">
+          <span>Owner's Phone</span>
+          <input type="tel" name="owner_phone" inputmode="tel" autocomplete="tel" placeholder="+7 700 123 45 67" required pattern="\+?[0-9\s\-()]{10,18}">
+          <small class="error">Enter a valid phone number, e.g. +7 700 123 45 67.</small>
+        </label>
+
+        <label class="field">
+          <span>Owner's Email</span>
+          <input type="email" name="owner_email" autocomplete="email" placeholder="name@example.com" required>
+          <small class="error">Enter a valid email address.</small>
+        </label>
+
+        <label class="field">
+          <span>Preferred Date</span>
+          <input type="date" name="visit_date" required>
+          <small class="error">Please select a date for the visit.</small>
+        </label>
+
+        <label class="field field-wide">
+          <span>Comment (optional)</span>
+          <textarea name="comment" rows="3" maxlength="300" placeholder="Symptoms, age, anything we should know"></textarea>
+        </label>
+
+        <button class="btn btn-primary btn-lg field-wide" type="submit">Make an Appointment</button>
+      </form>
+
+      <p class="thanks" id="thanks" role="status">Thank you! Your request has been sent. We will call you shortly to confirm the visit.</p>
+    </section>
+  </main>
+
+  <!-- 5. Footer component -->
+  <footer class="site-footer">
+    <section class="footer-about" aria-labelledby="footer-brand">
+      <h2 id="footer-brand">VetCare Clinic</h2>
+      <p>Friendly veterinary care for dogs, cats and small animals. Emergency help is available day and night.</p>
+    </section>
+
+    <nav class="footer-nav" aria-labelledby="footer-nav-title">
+      <h2 id="footer-nav-title">Navigation</h2>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+      </ul>
+    </nav>
+
+    <section class="footer-contact" aria-labelledby="footer-contact-title">
+      <h2 id="footer-contact-title">Contacts</h2>
+      <address>
+        <p>Emergency 24/7<br><a class="phone" href="tel:+77001234567">+7 (700) 123-45-67</a></p>
+        <p>12 Abay Avenue,<br>Astana, Kazakhstan</p>
+      </address>
+    </section>
+
+    <section class="footer-social" aria-labelledby="footer-social-title">
+      <h2 id="footer-social-title">Messengers</h2>
+      <ul class="messengers">
+        <li><a href="https://wa.me/77001234567" aria-label="WhatsApp"><img src="images/icon-whatsapp.svg" alt="" width="48" height="48"></a></li>
+        <li><a href="https://t.me/vetcare_demo" aria-label="Telegram"><img src="images/icon-telegram.svg" alt="" width="48" height="48"></a></li>
+      </ul>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" role="switch">
+        <span>Night mode (invert theme)</span>
+      </label>
+    </section>
+
+    <p class="legal"><small>© 2026 VetCare Clinic. All rights reserved. Educational demo website.</small></p>
+  </footer>
+
+  <!-- Thumb-zone quick actions (mobile only) -->
+  <aside class="dock" aria-label="Quick actions">
+    <a class="btn btn-primary" href="#appointment">Make an Appointment</a>
+    <a class="btn btn-call btn-icon" href="tel:+77001234567" aria-label="Call Doctor 24/7">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+    </a>
+  </aside>
+</body>
+</html>
